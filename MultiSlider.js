@@ -9,6 +9,7 @@ import {
   I18nManager,
   ImageBackground,
 } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 import DefaultMarker from './DefaultMarker';
 import DefaultLabel from './DefaultLabel';
@@ -432,7 +433,13 @@ export default class MultiSlider extends React.Component {
 
     const body = (
       <React.Fragment>
-        <View style={[styles.fullTrack, { width: sliderLength }]}>
+        {/* <View style={[styles.fullTrack, { width: sliderLength }]}> */}
+        <LinearGradient
+          start={{x: 0, y: 0}}
+          end={{x: 1, y: 0}}
+          locations={[0, 0.5, 1]}
+          colors={['#4AC531', '#F9A634', '#C44329']}
+          style={[{ width: sliderLength }]} >
           <View
             style={[
               styles.track,
@@ -537,7 +544,8 @@ export default class MultiSlider extends React.Component {
               </View>
             </View>
           )}
-        </View>
+        </LinearGradient>
+        {/* </View> */}
       </React.Fragment>
     );
 
