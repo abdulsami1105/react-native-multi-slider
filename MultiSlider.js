@@ -439,7 +439,7 @@ export default class MultiSlider extends React.Component {
           end={{x: 1, y: 0}}
           locations={[0, 0.5, 1]}
           colors={['#4AC531', '#F9A634', '#C44329']}
-          style={[ this.props.trackStyle, { width: sliderLength }]} />
+          style={[selectedStyle, { width: sliderLength }]} />
           {/* <View
             style={[
               styles.track,
