@@ -433,14 +433,14 @@ export default class MultiSlider extends React.Component {
 
     const body = (
       <React.Fragment>
-        {/* <View style={[styles.fullTrack, { width: sliderLength }]}> */}
+        <View style={[styles.fullTrack, { width: sliderLength }]}>
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 0}}
           locations={[0, 0.5, 1]}
           colors={['#4AC531', '#F9A634', '#C44329']}
-          style={[{ width: sliderLength }]} >
-          <View
+          style={[ this.props.trackStyle, { width: sliderLength }]} />
+          {/* <View
             style={[
               styles.track,
               this.props.trackStyle,
@@ -466,7 +466,7 @@ export default class MultiSlider extends React.Component {
                 { width: trackThreeLength },
               ]}
             />
-          )}
+          )} */}
           <View
             style={[
               styles.markerContainer,
@@ -544,8 +544,7 @@ export default class MultiSlider extends React.Component {
               </View>
             </View>
           )}
-        </LinearGradient>
-        {/* </View> */}
+        </View>
       </React.Fragment>
     );
 
